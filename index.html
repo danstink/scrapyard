@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoW Private Server Database</title>
+    <style>
+        /* CSS for styling the database layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ddd;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #FFD700;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .tabs button {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #444;
+            border: 1px solid #222;
+            color: #FFD700;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .tabs button.active {
+            background-color: #FFD700;
+            color: #333;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 10px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+
+        .entry {
+            background-color: #222;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .entry img {
+            max-width: 100px;
+            float: left;
+            margin-right: 15px;
+        }
+
+        .entry h2 {
+            color: #FFD700;
+        }
+        
+        .stats, .description {
+            font-size: 0.9em;
+        }
+.sort-button {
+    background-color: #333333; /* Change to your website's main color */
+    color: #ffd700; /* Text color */
+    border: 1px solid #333333; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    padding: 0px 0px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sort-button:hover {
+    background-color: #f0e086; /* Hover color */
+    color: #22223b; /* Text color on hover */
+}
+
+.sort-button:active {
+    background-color: #c9ada7; /* Active color */
+    color: #4a4e69; /* Text color on click */
+    transform: scale(0.98); /* Slight shrink effect on click */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WoW Private Server Database</h1>
+        
+        <div class="tabs">
+            <button onclick="showTab('items')">Misc. Items</button>
+            <button onclick="showTab('quests')">Misc. Quests</button>
+			<button onclick="showTab('npcs')">Misc. NPCs</button>
+            <button onclick="showTab('scrappers')">Scrapper's Society</button>
+        </div>
+
+        <!-- Items Section -->
+        <div id="items" class="tab-content">
+            <h2>Items</h2>
+			List of items that do not belong to a greater category, miscellaneous.
+			If you are searching for an item from a specific zone, mob, or level it is suggested you use the built in search function by pressing CTRL + F and search from the respective value.
+            <button class="sort-button" onclick="sortAlphabetically('items')">Sort Alphabetically</button>
+			<div class="entry">
+                <img src="item-icon.jpg" alt="Item Icon">
+                <h2>b</h2>
+                <div class="stats">Stats: +10 Strength, +5 Agility</div>
+            </div>
+			<div class="entry">
+                <img src="item-icon.jpg" alt="Item Icon">
+                <h2>a</h2>
+                <div class="stats">Stats: +10 Strength, +5 Agility</div>
+            </div>
+            <!-- Add more items here -->
+        </div>
+        
+        <!-- Quests Section -->
+        <div id="quests" class="tab-content">
+            <h2>Quests</h2>
+			List of quests that do not belong to a greater category, miscellaneous.
+			If you are searching for a quest of a specific level or zone, it is suggested that you use the built in search function by pressing CTRL + F, and search the respective level or zone.
+           <button class="sort-button" onclick="sortAlphabetically('items')">Sort Alphabetically</button>
+		   <div class="entry">
+                <img src="npc-image.jpg" alt="NPC Image">
+                <h2>Quest Title</h2>
+                <div class="description">Quest Description: Find the ancient relic hidden in the mountains.</div>
+            </div>
+            <!-- Add more quests here -->
+        </div>
+        
+		 <!-- NPC Section -->
+        <div id="npcs" class="tab-content">
+            <h2>NPCs</h2>
+			List of NPCs that do not belong to a greater category, miscellaneous.
+			If you are searching for an NPC from a specific zone, level, or quest it is suggested you use the built in search function by pressing CTRL + F and search from the respective value.
+            <button class="sort-button" onclick="sortAlphabetically('items')">Sort Alphabetically</button>
+			<div class="entry">
+                <img src="item-icon.jpg" alt="Item Icon">
+                <h2>b</h2>
+                <div class="stats">Stats: +10 Strength, +5 Agility</div>
+            </div>
+			<div class="entry">
+                <img src="item-icon.jpg" alt="Item Icon">
+                <h2>a</h2>
+                <div class="stats">Stats: +10 Strength, +5 Agility</div>
+            </div>
+            <!-- Add more items here -->
+        </div>
+		
+        <!-- Scrapper's Society Section -->
+        <div id="scrappers" class="tab-content">
+            <h2>Scrapper's Society</h2>
+			The Scrapper's Society is a group of elite mechanics dedicated to using rare scraps gathered from across Azeroth to engineer inventions aimed at defending and preserving the land. Their creations range from powerful tools to mechanical marvels, each crafted with the goal of saving Azeroth from looming threats.
+            <div class="tabs">
+                <button onclick="showTier('tier1')">Tier I</button>
+                <button onclick="showTier('tier2')">Tier II</button>
+                <button onclick="showTier('tier3')">Tier III</button>
+                <button onclick="showTier('tier4')">Tier IV</button>
+                <button onclick="showTier('tier5')">Tier V</button>
+            </div>
+
+            <!-- Tier Sections -->
+            <div id="tier1" class="tab-content">
+                <h3>Scrapper's Society Tier I</h3>
+				Scrapper's Society Tier One, the entry-level branch of this elite organization, focuses on recruiting adventurers to gather rare scraps from the rugged terrain of Westfall. As the lowest tier of Scrappers, they serve as the foundation of the Society’s efforts, scouring Azeroth for vital materials needed for higher-level creations and innovations.
+                <button class="sort-button" onclick="sortAlphabetically('tier1')">Sort Alphabetically</button>
+				<div class="entry">
+                    <img src="images/gnomemale.jpg" alt="Item Icon">
+                    <h2>Tipper</h2>
+					Vendor
+                    <div class="stats">Tipper, the lowest-ranked Scrapper in the Society, can be found tinkering away in Westfall, eager to exchange his humble creations for scraps gathered from the area. Although his status is modest, Tipper offers a range of valuable weapons crafted from salvaged parts, rewarding adventurers who bring him the rare Westfall scrap he needs.</div>
+                	<br>
+					<div class="stats">Tipper, can be found under a pitched tent by flightmaster Thor in Westfall.</div>
+				</div>
+				<div class="entry">
+                    <img src="images/gnomemale.jpg" alt="Item Icon">
+                    <h2>Moss</h2>
+					Quest Giver
+                    <div class="stats">Moss is an ambitious engineer and one of the lowest-ranking members of the Scrappers Society, stationed in Westfall alongside his good friend Tipper. Despite his junior status, Moss is a vital part of the Society’s efforts, coordinating the reclamation of rare scraps scattered across Azeroth. Known for his keen engineering skills, he focuses on deconstructing rogue machines and sees great potential in materials gathered from powerful constructs like the Scrap Titan. Under a pitched tent near flightmaster Thor, Moss works with Tipper, drawing up blueprints and guiding adventurers eager to support the Scrappers Society’s mission to turn reclaimed scraps into valuable innovations.</div>
+                	<br>
+					<div class="stats">Moss, can be found under a pitched tent by flightmaster Thor in Westfall.</div>
+				</div>
+				<div class="entry">
+                    <img src="images/mob.jpg" alt="Item Icon">
+                    <h2>Scrap Titan (30+)</h2>
+                    <div class="stats">The Scrap Titan is a colossal, self-enhancing harvester that roams Westfall, absorbing rare scraps from fallen golems to fuel its ever-growing power. Seen as a dangerous rogue machine by the Scrapper's Society, they have issued a call for brave adventurers to dismantle the Titan and reclaim its valuable contents to prevent further destruction.</div>
+					<br><div class="stats">Loot: Scrapper's Ironspidle (15.00%)</div>
+					<div class="stats">Loot: Scrapper's Joltblade (13.00%)</div>
+					<div class="stats">Loot: Scrapper's Nail Gun (20.00%)</div>
+					<div class="stats">Loot: Scrapper's Servo Arm (15.00%)</div>
+					<div class="stats">Loot: Scrapper's Sunderedge (15.00%)</div>
+					<div class="stats">Loot: Westfall Scrap (6x - 11x)</div>
+					<br><div class="stats">The Scrap Titan can be found wandering the Dead Acre in South Eastern Westfall.</div>
+				</div>
+				    <div class="entry">
+                    <img src="images/quest.jpg" alt="NPC Image">
+                    <h2>Dismantling the Titan</h2>
+                    <div class="description">Moss, a determined member of the Scrappers Society, approaches you with a serious look. "Adventurer, we face a critical challenge. The Scrap Titan, a massive harvester, roams the Dead Acre in South Eastern Westfall, absorbing rare scraps from fallen golems. This rogue machine poses a significant threat to our efforts, and we must eliminate it swiftly to reclaim those valuable materials for our upcoming innovations.</div>
+                <br><div class="description">The quest can be accepted from Moss in Westfall.</div><br>
+				<div class="description"><b>Rewards: Titan's Oil Rag</b></div>
+				</div>
+				<div class="entry">
+                    <img src="images/westfallscrap.jpg" alt="Item Icon">
+                    <h2>Westfall Scrap</h2>
+                    <div class="stats">A valuable piece of scrap recovered from mechanical creatures in Westfall.</div>
+					<div class="stats">Can be traded with Tipper in Westfall for Scrapper's weapons.</div>
+					<div class="stats"><b>Source: 6 - 11 can drop from the Scrap Titan in Westfall.</b></div>
+					<div class="stats"><b>Source: Dropped from Foe Reaper 4000 in Westfall.</b></div>
+					<div class="stats"><b>Source: Dropped from Harvest Golem in Westfall.</b></div>
+					<div class="stats"><b>Source: Dropped from Harvest Reaper in Westfall.</b></div>
+					<div class="stats"><b>Source: Dropped from Harvest Watcher in Westfall.</b></div>
+					<div class="stats"><b>Source: Dropped from Rusty Harvest Golem in Westfall.</b></div><br>
+					Can be traded and sold on the auction house.
+                </div>
+				<div class="entry">
+                    <img src="images/scrappersironspidle.jpg" alt="Item Icon">
+                    <h2>Scrapper's Ironspindle</h2>
+                    <div class="stats">28 - 42 Damage (Speed 2.80)</div>
+					<div class="stats">12.5 damage per sec.</div>
+					<div class="stats">+4 Stamina</div>
+					<div class="stats">+5 Intellect</div>
+					<div class="stats">+5 Spirit</div>
+					<div class="stats">Requires Level 15</div>
+					<div class="stats"><b>Source: Can be purchased from Tipper <Scrapper's Society> in Westfall for 20 'Westfall Scrap'.</b></div>
+					<div class="stats"><b>Source: Has a 15.00% chance to drop from the Scrap Titan (30+) in Westfall..</b></div>
+                </div>
+				<div class="entry">
+                    <img src="images/scrappersjoltblade.jpg" alt="Item Icon">
+                    <h2>Scrapper's Joltblade</h2>
+                    <div class="stats">15 - 28 Damage (Speed 1.70)</div>
+					<div class="stats">12.6 damage per sec.</div>
+					<div class="stats">+2 Agility</div>
+					<div class="stats">Chance on hit: Casts a bolt of lightning at the target for 13 to 15 Nature damage.</div>
+					<div class="stats">Requires Level 15</div>
+					<div class="stats"><b>Source: Can be purchased from Tipper <Scrapper's Society> in Westfall for 20 'Westfall Scrap'.</b></div>
+					<div class="stats"><b>Source: Has a 13.00% chance to drop from the Scrap Titan (30+) in Westfall..</b></div>
+                </div>
+				<div class="entry">
+                    <img src="images/scrappersnailgun.jpg" alt="Item Icon">
+                    <h2>Scrapper's Nail Gun</h2>
+                    <div class="stats">20 - 37 Damage (Speed 2.60)</div>
+					<div class="stats">11.0 damage per sec.</div>
+					<div class="stats">Chance on hit: Sunders the target's armor, reducing it by 4% per Sunder Armor and causes a high amount of threat. Threat increased by attack power. Can be applied up to 5 times. Lasts 30 sec.</div>
+					<div class="stats">Requires Level 15</div>
+					<div class="stats"><b>Source: Can be purchased from Tipper <Scrapper's Society> in Westfall for 20 'Westfall Scrap'.</b></div>
+					<div class="stats"><b>Source: Has a 20.00% chance to drop from the Scrap Titan (30+) in Westfall..</b></div>
+                </div>
+				<div class="entry">
+                    <img src="images/scrappersservoarm.jpg" alt="Item Icon">
+                    <h2>Scrapper's Servo Arm</h2>
+                    <div class="stats">25 - 48 Damage (Speed 2.60)</div>
+					<div class="stats">14.0 damage per sec.</div>
+					<div class="stats">+3 Strength</div>
+					<div class="stats">+3 Stamina</div>
+					<div class="stats">Requires Level 15</div>
+					<div class="stats"><b>Source: Can be purchased from Tipper <Scrapper's Society> in Westfall for 20 'Westfall Scrap'.</b></div>
+					<div class="stats"><b>Source: Has a 15.00% chance to drop from the Scrap Titan (30+) in Westfall..</b></div>
+                </div>
+				<div class="entry">
+                    <img src="images/scrapperssunderedge.jpg" alt="Item Icon">
+                    <h2>Scrapper's Sunderedge</h2>
+                    <div class="stats">35 - 50 Damage (Speed 2.60)</div>
+					<div class="stats">17.0 damage per sec.</div>
+					<div class="stats">+2 Strength</div>
+					<div class="stats">+8 Stamina</div>
+					<div class="stats">Requires Level 15</div>
+					<div class="stats"><b>Source: Can be purchased from Tipper <Scrapper's Society> in Westfall for 20 'Westfall Scrap'.</b></div>
+					<div class="stats"><b>Source: Has a 15.00% chance to drop from the Scrap Titan (30+) in Westfall..</b></div>
+                </div>
+				<div class="entry">
+                    <img src="images/titansoilrag.jpg" alt="Item Icon">
+                    <h2>Titans Oil Rag</h2>
+                    <div class="stats">Cloth headpiece</div>
+					<div class="stats">21 Armor</div>
+					<div class="stats">+3 Stamina</div>
+					<div class="stats"><b>Source: Rewarded from the quest, 'Dismantling the Titan'.</b></div>
+                </div>
+            </div>
+            <!-- Add more tier content here for Tier II, III, IV, and V -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for toggling between tabs
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+        
+        function showTier(tierId) {
+            document.querySelectorAll('#scrappers .tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(tierId).classList.add('active');
+        }
+    </script>
+	<script>
+    function sortAlphabetically(sectionId) {
+        const container = document.getElementById(sectionId);
+        const entries = Array.from(container.getElementsByClassName('entry'));
+        entries.sort((a, b) => a.querySelector('h2').textContent.localeCompare(b.querySelector('h2').textContent));
+        entries.forEach(entry => container.appendChild(entry));
+    }
+</script>
+
+</body>
+</html>
