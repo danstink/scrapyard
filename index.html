@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,39 +79,96 @@
         .stats, .description {
             font-size: 0.9em;
         }
-.sort-button {
-    background-color: #333333; /* Change to your website's main color */
-    color: #ffd700; /* Text color */
-    border: 1px solid #333333; /* Border color */
-    border-radius: 4px; /* Rounded corners */
-    padding: 0px 0px;
-    font-size: 16px;
-    cursor: pointer;
-}
 
-.sort-button:hover {
-    background-color: #f0e086; /* Hover color */
-    color: #22223b; /* Text color on hover */
-}
+        .sort-button {
+            background-color: #333333; /* Change to your website's main color */
+            color: #ffd700; /* Text color */
+            border: 1px solid #333333; /* Border color */
+            border-radius: 4px; /* Rounded corners */
+            padding: 0px 0px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-.sort-button:active {
-    background-color: #c9ada7; /* Active color */
-    color: #4a4e69; /* Text color on click */
-    transform: scale(0.98); /* Slight shrink effect on click */
-}
+        .sort-button:hover {
+            background-color: #f0e086; /* Hover color */
+            color: #22223b; /* Text color on hover */
+        }
 
+        .sort-button:active {
+            background-color: #c9ada7; /* Active color */
+            color: #4a4e69; /* Text color on click */
+            transform: scale(0.98); /* Slight shrink effect on click */
+        }
+
+        /* Search bar styling */
+        #searchBar {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #444; /* Dark background color for search bar */
+            color: #ffd700; /* Text color to match theme */
+        }
+
+        /* Placeholder text color */
+        #searchBar::placeholder {
+            color: #999;
+        }
+		
+		/* Search bar styling */
+        #searchBar2 {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #444; /* Dark background color for search bar */
+            color: #ffd700; /* Text color to match theme */
+        }
+
+        /* Placeholder text color */
+        #searchBar2::placeholder {
+            color: #999;
+        }
+		
+		/* Search bar styling */
+        #searchBar3 {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #444; /* Dark background color for search bar */
+            color: #ffd700; /* Text color to match theme */
+        }
+
+        /* Placeholder text color */
+        #searchBar3::placeholder {
+            color: #999;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>WoW Private Server Database</h1>
-        
+        <!-- Search Bar -->
+		
+
         <div class="tabs">
             <button onclick="showTab('items')">Misc. Items</button>
             <button onclick="showTab('quests')">Misc. Quests</button>
 			<button onclick="showTab('npcs')">Misc. NPCs</button>
             <button onclick="showTab('scrappers')">Scrapper's Society</button>
+			<button onclick="showTab('necrotic')">The Necrotic Legion</button>
         </div>
+
+
 
         <!-- Items Section -->
         <div id="items" class="tab-content">
@@ -164,6 +222,67 @@
             <!-- Add more items here -->
         </div>
 		
+		 <!-- Necrotic Section -->
+        <div id="necrotic" class="tab-content">
+            <h2>The Necrotic Legion</h2>
+			The Necrotic Legion has silently infiltrated Azeroth, a formidable coalition of necromancers, demons, and dark masterminds. Operating from the shadows, they have begun to seize vast and powerful territories, spreading fear and death with every step. Their ranks are filled with the spirits of the fallen, bound to their will and used as tools of terror and control. With the power to manipulate life and death itself, these dark forces seek to dominate all of Azeroth, unraveling the very fabric of existence. Their plans are as insidious as they are deadly, and if left unchecked, they will bring the world to its knees. It is imperative that they are stopped before their unholy reign spreads beyond salvation.
+			<div class="tabs">
+                <button onclick="showTier('org')">Orimmar</button>
+			</div>
+			<div id="org" class="tab-content">
+			This content is designed for level 48-60 <br><br>
+			Orgrimmar has been taken over by powerful necromancers and their demonic minions. The city’s residents have been killed and their souls bound to the will of the Necrotic Legion. The takeover went unnoticed due to other major events happening at the time, particularly the operations of the Scrappers Society and the threat of Naxxramas, which drew attention away from the growing danger in Orgrimmar. The city now lies in ruin, controlled by dark forces. Quests are available starting at level 40, but it is strongly advised to wait until around level 50 before entering, as the area is extremely dangerous. Orgrimmar is just the first major outpost to fall under the Necrotic Legion’s control, with more territories likely to follow.
+			<div class="tabs">
+                <button onclick="showTier('orgNPC')">Show NPCs</button>
+				<button onclick="showTier('orgITEM')">Show Items</button>
+			</div>
+			<div id="orgNPC" class="tab-content">
+			<div class="entry">
+                <img src="images/mob.jpg" alt="Item Icon">
+                <h2>Necrotic Spiritweaver (47 - 48+)</h2>
+				Elite
+                <div class="stats">Spiritweavers are the lowest-ranking members of the Necrotic Legion, yet still formidable in their control over the dead. Specializing in manipulating and binding the spirits of the fallen, they use their dark powers to command restless souls and guard the outermost layers of the Legion's operations. Despite their lower rank, their role is crucial, acting as sentinels and enforcers at the fringes of the Legion’s territory, ensuring that no one interferes with the darker, more powerful forces deeper within.</div>
+				<br>Loot: Spiritweaver's Band (~0.94%)<br>
+				Loot: Spiritweaver's Vestments (~1.32%)<br>
+				<br>Necrotic Spiritweaver's can be found on the outskirts of Necrotic Legion operation zones.
+			</div>
+			<div class="entry">
+                <img src="images/mob.jpg" alt="Item Icon">
+                <h2>Tortured Orgrimmar Citizen (30 - 38)</h2>
+                <div class="stats">Tortured Orgrimmar Citizens are the remnants of Orgrimmar’s population, transformed into unwilling minions by the dark magic of the Necrotic Legion. These once-proud citizens were slain during the Legion’s takeover and have now been twisted into wretched, tortured spirits bound to serve their new masters. Devoid of free will, they are forced to carry out the Legion’s bidding, often appearing as spectral shadows of their former selves, forever bound in a state of torment. These tragic figures patrol their once home, trapped between life and death, unable to escape their cruel fate.</div>
+				<br>Necrotic Spiritweaver's can be found on the outskirts of Necrotic Legion operation zones.
+			</div>
+		</div>
+		<div id="orgITEM" class="tab-content">
+			<div class="entry">
+                    <img src="images/spiritweaverband.jpg" alt="Item Icon">
+                    <h2>Spiritweaver's Band</h2>
+					Armor - Cloth Waist
+                    <div class="stats">Cloth Belt</div>
+					<div class="stats">43 Armor</div>
+					<div class="stats">+12 Stamina</div>
+					<div class="stats">+8 Intellect</div>
+					<div class="stats">+9 Spirit</div>
+					<div class="stats">+12 Shadow Resistance</div>
+					<div class="stats"><b>Source: Very rare drop from Necrotic Spiritweaver's in Necrotic Invasions.</b></div>
+			</div>
+			<div class="entry">
+                    <img src="images/spiritweavervestment.jpg" alt="Item Icon">
+                    <h2>Spiritweaver's Vestments</h2>
+					Armor - Cloth Chest
+                    <div class="stats">Cloth Chestpiece</div>
+					<div class="stats">82 Armor</div>
+					<div class="stats">+14 Intellect</div>
+					<div class="stats">+7 Shadow Resistance</div>
+					<div class="stats"><b>Equip: Increases shadow spell power by 40.</b></div>
+					<div class="stats"><b>Source: Very rare drop from Necrotic Spiritweaver's in Necrotic Invasions.</b></div>
+			</div>
+		</div>
+	</div>
+            <!-- Add more Necrotic here -->
+        </div>
+		
+		
         <!-- Scrapper's Society Section -->
         <div id="scrappers" class="tab-content">
             <h2>Scrapper's Society</h2>
@@ -175,12 +294,13 @@
                 <button onclick="showTier('tier4')">Tier IV</button>
                 <button onclick="showTier('tier5')">Tier V</button>
             </div>
-
+			
             <!-- Tier Sections -->
             <div id="tier1" class="tab-content">
                 <h3>Scrapper's Society Tier I</h3>
 				Scrapper's Society Tier One, the entry-level branch of this elite organization, focuses on recruiting adventurers to gather rare scraps from the rugged terrain of Westfall. As the lowest tier of Scrappers, they serve as the foundation of the Society’s efforts, scouring Azeroth for vital materials needed for higher-level creations and innovations.
                 <button class="sort-button" onclick="sortAlphabetically('tier1')">Sort Alphabetically</button><br><br> This tier has content designed for level 15-27.
+				<input type="text" id="searchBar" placeholder="Search keywords... (EX. quest, vendor, armor)" onkeyup="searchItems('tier1')" style="width: 97%; padding: 1px; margin-bottom: 20px;">
 				<div class="entry">
                     <img src="images/gnomemale.jpg" alt="Item Icon">
                     <h2>Tipper</h2>
@@ -307,7 +427,7 @@
 			<h3>Scrapper's Society Tier II</h3>
 Scrapper's Society Tier Two represents the next level in the organization, where skilled adventurers and mechanics tackle complex pieces of scrap gathered from the darker corners of Azeroth. This tier, led primarily by dwarves, showcases their unmatched expertise in brutal craftsmanship, forging formidable inventions designed to unleash vicious attacks and overpower foes with raw, devastating force. A critical role of Tier II involves reclaiming stolen scrap from the deviant forces lurking in Duskwood, ensuring these valuable materials remain in the Society's control. The branch’s setups, marked by rugged, battle-hardened equipment, can be found in Darkshire, nestled within the shadows of Duskwood, where they prepare to deploy their savage weaponry in defense of Azeroth.
                 <button class="sort-button" onclick="sortAlphabetically('tier2')">Sort Alphabetically</button><br><br> This tier has content designed for level 25-36.
-				
+				<input type="text" id="searchBar" placeholder="Search keywords... (EX. quest, vendor, armor)" onkeyup="searchItems('tier2')" style="width: 97%; padding: 1px; margin-bottom: 20px;">
 				<div class="entry">
                     <img src="images/maledwarf.jpg" alt="Item Icon">
                     <h2>Stoffer</h2>
@@ -449,6 +569,7 @@ Scrapper's Society Tier Two represents the next level in the organization, where
 			<h3>Scrapper's Society Tier III</h3>
 			Scrapper's Society Tier Three is where goblin craft meets clever negotiation. Though they’ve already secured premium scrap from all corners of Azeroth, the goblins have set up a unique system to ensure adventurers truly earn the right to access it—and perhaps, serve the goblins’ own “interests” along the way. To unlock this high-grade scrap, adventurers must obtain commendations from prominent figures throughout Stranglethorn by completing tasks and favors. These commendations, while proof of loyalty, also serve as a valuable currency for the goblins, allowing them to gain special privileges around Booty Bay. With enough commendations, adventurers can bargain for scrap, which they can then trade for powerful, specialized items crafted by the Scrapper’s Society.
 			     <button class="sort-button" onclick="sortAlphabetically('tier3')">Sort Alphabetically</button><br><br> This tier has content designed for level 35-48.
+				<input type="text" id="searchBar" placeholder="Search keywords... (EX. quest, vendor, armor)" onkeyup="searchItems('tier3')" style="width: 97%; padding: 1px; margin-bottom: 20px;">
 				<div class="entry">
                     <img src="images/goblinmale.jpg" alt="Item Icon">
                     <h2>Bizzle</h2>
@@ -546,7 +667,6 @@ Here’s de task: bring me back some of dat Zanzil Blood. Ya can find it on de z
                     <h2>Bizzle's Bottomless Bomb Bag</h2>
 					Offhand
                     <div class="stats">Held in Off-hand</div>
-					<div class="stats">52 Armor</div>
 					<div class="stats">+8 Stamina</div>
 					<div class="stats">+10 Fire Resistance</div>
 					<div class="stats">Requires Level 35</div>
@@ -603,8 +723,26 @@ Here’s de task: bring me back some of dat Zanzil Blood. Ya can find it on de z
         entries.sort((a, b) => a.querySelector('h2').textContent.localeCompare(b.querySelector('h2').textContent));
         entries.forEach(entry => container.appendChild(entry));
     }
+	
+</script>
+<script>
+function searchItems(tierId) {
+    const searchInput = document.querySelector(`#${tierId} #searchBar`).value.toLowerCase();
+    const entries = document.querySelectorAll(`#${tierId} .entry`);
+
+    entries.forEach(entry => {
+        const textContent = entry.textContent.toLowerCase();
+        if (textContent.includes(searchInput)) {
+            entry.style.display = "";
+        } else {
+            entry.style.display = "none";
+        }
+    });
+}
+
+
+
 </script>
 
 </body>
 </html>
-
